@@ -1,0 +1,134 @@
+{{#if admin_user}}
+
+<img class="user_baner" src="/img/user_banner.png" alt="">
+<div class="profile_outerwrap">
+    <div class="profile_innerwrap">
+        <h1>{{admin_user.first_name}} {{admin_user.last_name}}</h1>
+        <div class="content_splitwrap">
+            <div class="profilePic_wrap">
+                <img src="/img/uploads/{{admin_user.profilePic}}" alt="{{admin_user.profilePic}}">
+                <hr>
+                <form method="POST" action="edit/{{admin_user._id}}?_method=PUT" enctype="multipart/form-data">
+                    <label class="file_button">New Avatar
+                        <input type="file" name="profilePic">
+                    </label>
+
+            </div>
+            <div class="profile_information">
+                <h3>Edit profile information</h3>
+                <div class="errors">{{{errors}}}</div>
+                {{!-- <form action="user/edit" method="post"> --}}
+                <form action="edit/{{admin_user._id}}?_method=PUT" method="post">
+                    <div class="profile_information_details">
+                        <p>First name: </p>
+                        <input type="text" name="signup_fname" class="signup_input_form"
+                            value="{{admin_user.first_name}}">
+
+                        <p>Last name {{admin_user.last_name}}</p>
+                        <input type="text" name="signup_lname" class="signup_input_form"
+                            value="{{admin_user.last_name}}">
+
+                        <p>E-mail:</p>
+                        <input type="text" name="signup_email" class="signup_input_form" value="{{admin_user.email}}">
+
+
+                        <p>New password</p>
+                        <div class="passwordDiv">
+
+                            <input type="password" name="signup_password" placeholder="Enter a New Password"
+                                class="signup_input_form">
+                            <input type="password" name="signup_password_confirm" placeholder="Confirm a New Password"
+                                class="signup_input_form" id="signup_input_form_pass_confirm">
+                        </div>
+
+                        <p>Country:</p>
+                        <input type="text" name="signup_country" class="signup_input_form" id="signup_country_id"
+                            value="{{admin_user.country}}">
+                        <p>City:</p>
+
+                        <input type="text" name="signup_city" class="signup_input_form" value="{{admin_user.city}}">
+                        <p>Address:</p>
+                        <input type="text" name="signup_address" class="signup_input_form"
+                            value="{{admin_user.address}}">
+                        <p>Postal Code:</p>
+                        <input type="text" name="signup_postalCode" class="signup_input_form"
+                            value="{{admin_user.postalCode}}">
+                        <div>
+                            <input type="submit" class="profile_button" value="Save">
+                            {{!-- <a type="submit" class="profile_button">Save</a> --}}
+                        </div>
+                        <div>
+                            <a type="submit" class="profile_button" href="/user/profile">Exit</a>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{{else}}
+
+<img class="user_baner" src="/img/user_banner.png" alt="">
+<div class="profile_outerwrap">
+    <div class="profile_innerwrap">
+        <h1>{{user.first_name}} {{user.last_name}}</h1>
+        <div class="content_splitwrap">
+            <div class="profilePic_wrap">
+                <img src="/img/uploads/{{user.profilePic}}" alt="{{user.profilePic}}">
+                <hr>
+                <form method="POST" action="edit/{{user._id}}?_method=PUT" enctype="multipart/form-data">
+                    <label class="file_button">New Avatar
+                        <input type="file" name="profilePic">
+                    </label>
+
+            </div>
+            <div class="profile_information">
+                <h3>Edit profile information</h3>
+                <div class="errors">{{{errors}}}</div>
+                <hr>
+                {{!-- <form action="user/edit" method="post"> --}}
+                <form action="edit/{{user._id}}?_method=PUT" method="post">
+                    <div class="profile_information_details">
+                        <p>First name: </p>
+                        <input type="text" name="signup_fname" class="signup_input_form" value="{{user.first_name}}">
+                        <p>Last name: </p>
+                        <input type="text" name="signup_lname" class="signup_input_form" value="{{user.last_name}}">
+                        <p>E-mail:</p>
+                        <input type="text" name="signup_email" class="signup_input_form" value="{{user.email}}">
+                        <p>New password</p>
+                        <div class="passwordDiv">
+                            <input type="password" name="signup_password" placeholder="Enter a New Password"
+                                class="signup_input_form">
+                            <input type="password" name="signup_password_confirm" placeholder="Confirm a New Password"
+                                class="signup_input_form" id="signup_input_form_pass_confirm">
+                        </div>
+                        <p>Country:</p>
+                        <input type="text" name="signup_country" class="signup_input_form" id="signup_country_id"
+                            value="{{user.country}}">
+                        <p>City:</p>
+                        <input type="text" name="signup_city" class="signup_input_form" value="{{user.city}}">
+                        <p>Address:</p>
+                        <input type="text" name="signup_address" class="signup_input_form" value="{{user.address}}">
+                        <p>Postal Code:</p>
+                        <input type="text" name="signup_postalCode" class="signup_input_form"
+                            value="{{user.postalCode}}">
+                        <div>
+                            <input type="submit" class="profile_button" value="Engrave">
+                            {{!-- <a type="submit" class="profile_button" href="/user/profile/edit">Save</a> --}}
+                        </div>
+                        {{!-- <div>
+                        <a style="float:right" class="profile_button" href="/user/profile/edit">Delete profile</a>
+                    </div> --}}
+                        <div>
+                            <a type="submit" class="profile_button" href="/user/profile">Exit</a>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+
+{{/if}}

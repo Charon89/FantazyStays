@@ -1,0 +1,82 @@
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="stylesheet" href="/css/style.css">
+        <link href="https://fonts.googleapis.com/css?family=Trade+Winds&display=swap" rel="stylesheet">
+        <title>Fantasy Stays</title>
+    </head>
+
+    <body>
+        {{#if user}}
+        <nav class="navbar">
+            <div id="navbar_links_left">
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/burrow/burrowList">Burrows</a></li>
+                </ul>
+            </div>
+            <div id="navbar_logo">
+                <img id="logo_img" src="/img/logo_fs.png" alt="logo">
+            </div>
+            <div id="navbar_links_right">
+                <ul>
+                    <li><a href="/user/profile">Profile</a></li>
+                    <li><a href="/user/logout">Log Out</a></li>
+                </ul>
+            </div>
+        </nav>
+        {{else}}
+        {{#if admin_user}}
+        <nav class="navbar" style="background-color: rgba(255, 0, 0, 0.198);">
+            <div id="navbar_links_left">
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/burrow/burrowList">Burrows</a></li>
+                </ul>
+            </div>
+            <div id="navbar_logo">
+                <h6 style="color: red; text-align:center; margin:-0px;">Admin</h6>
+                <img id="logo_img" src="/img/logo_fs.png" alt="logo">
+            </div>
+            <div id="navbar_links_right">
+                <ul>
+                    <li><a href="/user/profile">Profile</a></li>
+                    <li><a href="/user/logout">Log Out</a></li>
+                </ul>
+            </div>
+        </nav>
+        {{else}}
+        <nav class="navbar">
+            <div id="navbar_links_left">
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/burrow/burrowList">Burrows</a></li>
+                </ul>
+            </div>
+            <div id="navbar_logo">
+                <img id="logo_img" src="/img/logo_fs.png" alt="logo">
+            </div>
+            <div id="navbar_links_right">
+                <ul>
+                    <li><a href="/user/signup">Sign Up</a></li>
+                    <li><a href="/user/login">Log In</a></li>
+                </ul>
+            </div>
+        </nav>
+        {{/if}}
+        {{/if}}
+        {{{body}}}
+        {{!-- <footer>
+            <div>
+                <h3>Follow Fantasy Stays</h3>
+                <img src="https://img.icons8.com/ios-filled/50/000000/google-logo.png">
+                <img src="https://img.icons8.com/material-outlined/50/000000/facebook-f.png">
+                <img src="https://img.icons8.com/android/50/000000/twitter.png">
+            </div>
+        </footer> --}}
+    </body>
+
+</html>

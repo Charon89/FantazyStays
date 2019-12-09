@@ -1,0 +1,116 @@
+#home_wrap {
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: 1fr 60% 1fr;
+}
+
+#home_wrap div {
+    grid-column: 2;
+    margin: 15px;
+}
+
+#home_wrap h2 {
+    grid-column: 2;
+}
+
+#home_wrap h3 {
+    margin: 20px;
+}
+
+
+#home_img {
+    margin-top: 80px;
+    width: 100%;
+
+    box-shadow: 0px 2px 10px 2px black;
+}
+
+#random_stays_outerwrap {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+#random_stays_outerwrap div {
+    grid-column: auto;
+}
+
+#random_stays_outerwrap img {
+    border: 1px solid rgba(255, 249, 200, 0.164);
+    box-shadow: 0px 1px 5px 1px black;
+    width: 100%;
+    height: auto;
+}
+
+#random_stays_outerwrap img:hover {
+    transition: 1s;
+    border: 1px solid rgba(255, 249, 200, 0.534);
+    box-shadow: 0px 0px 0px 0px black;
+}
+
+footer {
+    visibility: visible;
+    clear: both;
+    position: relative;
+
+    margin-top: -200px;
+    margin-top: 20px;
+    text-align: center;
+    width: 100%;
+    box-shadow: 0px -2px 10px 2px black;
+    background-color: rgba(24, 12, 9, 0.65);
+}
+
+footer h3 {
+    position: relative;
+    display: inline-block;
+
+    padding: 0 0 10px 0;
+}
+
+hr {
+    margin: 5px 0px;
+    border: 1px solid black;
+    height: 1px;
+    box-shadow: 0px 0px 1px 1px rgba(0, 0, 0, 0.781);
+
+    background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, 0), rgba(255, 249, 200, 0.534), rgba(0, 0, 0, 0));
+    background-image: -moz-linear-gradient(left, rgba(0, 0, 0, 0), rgba(255, 249, 200, 0.534), rgba(0, 0, 0, 0));
+    background-image: -ms-linear-gradient(left, rgba(0, 0, 0, 0), rgba(255, 249, 200, 0.534), rgba(0, 0, 0, 0));
+    background-image: -o-linear-gradient(left, rgba(0, 0, 0, 0), rgba(255, 249, 200, 0.534), rgba(0, 0, 0, 0));
+}
+
+
+@media only screen and (max-width: 780px) {
+    .navbar {
+        letter-spacing: 6px;
+        font-weight: 900;
+        display: grid;
+        grid-template-columns: 1fr 100px 1fr;
+        background-color: var(--navbar-bg-color);
+        font-size: 1em;
+        height: 120px;
+    }
+
+    #home_img {
+        margin-top: 120px;
+        width: 100%;
+    }
+
+    #home_wrap {
+        display: block;
+    }
+
+    #home_wrap div {
+        margin: 15px;
+    }
+
+    #home_wrap h3,
+    h2 {
+        margin: 20px;
+    }
+
+    #random_stays_outerwrap {
+        display: block;
+
+    }
+}

@@ -1,0 +1,49 @@
+<div class="form_outerwrap">
+
+    <div class="form_innerwrap">
+        <a href="/">
+            <p style="text-align: right; font-size:1.5em;" id="RegistrationClose">&#10006;</p>
+        </a>
+
+        <img src="./img/logo_fs.png" alt="logo_fs">
+        <h1>New user registration</h1><br><br>
+        <form action="/user/signup" method="post">
+
+            <input type="email" name="signup_email" placeholder="Email address" class="signup_input_form"
+                value="{{r_email}}"><br>
+            <div class="errors">{{{message.email}}}</div>
+
+            <input type="text" name="signup_fname" placeholder="First name" class="signup_input_form"
+                value="{{r_first_name}}"><br>
+            <div class="errors">{{{message.first_name}}}</div>
+
+            <input type="text" name="signup_lname" placeholder="Last name" class="signup_input_form"
+                value="{{r_last_name}}"><br>
+            <div class="errors">{{{message.last_name}}}</div>
+
+            <input type="password" name="signup_password" placeholder="Create a Password" class="signup_input_form"
+                value="{{r_password}}"><br>
+            <input type="password" name="signup_password_confirm" placeholder="Confirm a Password" class="signup_input_form"
+                value="{{r_password}}"><br>
+            <div class="errors">{{{message.password}}}</div>
+
+            <h3 id="BirthHeader">Birthday</h3>
+            <p>To sign up, you need to be at least 18 years old. Other people who use WillBrB won't see
+                your
+                birthday.</p>
+            <input type="date" name="signup_birth" id="signup__birth" class="signup_input_form"
+                value="{{r_date_of_birth}}">
+            <div class="errors">{{{message.birthday}}}</div>
+
+            <div style="text-align: left;">
+                <input type="checkbox" name="signup_subscription" style="display: inline;" checked>
+                <span>If checked, we’ll send you marketing promotions, special offers,
+                    inspiration, and policy
+                    updates via
+                    email.</span> <br>
+                <input type="submit" value="Sign Up" class="submit_button">
+            </div>
+
+        </form>
+    </div>
+</div>

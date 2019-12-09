@@ -1,0 +1,20 @@
+<div class="emptydiv">sdf</div>
+<div class="burrowView_outerWrap">
+    <div class="burrowView_innerWrap">
+        <div class="burrowView_content">
+            <div class="img_div">
+                <img src="../img/uploads/{{burrowView.burrowPic}}" alt="">
+            </div>
+            <div>
+                <br>
+                <h1>{{burrowView.title}}</h1>
+                <form method="POST" action="/burrow/book/{{burrowView._id}}" style="display:inline;">
+                    <input type="submit" value="Book" class="burrowList_button" style="display:inline;">
+                </form>
+                <hr>
+                <h3>{{burrowView.price}} CAD/Night</h3>
+                <p>{{burrowView.description}}</p>
+            </div>
+        </div>
+    </div>
+</div>

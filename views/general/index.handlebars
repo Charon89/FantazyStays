@@ -1,0 +1,151 @@
+<img id="home_img" src="./img/home_image.jpg" alt="home_image">
+<div class="search_outerform">
+    <div class="search_form">
+        <form action="/" method="post">
+            <h1>Reservation portal</h1>
+            <div class="errors">{{{errors}}}</div>
+            <p>Location</p>
+
+            <select name="search_where" class="search_field">
+                <option value="Anywhere">Anywhere</option>
+                <option value="Winterspring">Winterspring</option>
+                <option value="Duskwood">Duskwood</option>
+                <option value="Westfall">Westfall</option>
+                <option value="Swamp of Sorrows">Swamp of Sorrows</option>
+            </select>
+            <div class="errors">{{message.where}}</div>
+            <div id='booking_dates'>
+                <p>Check-in</p>
+                <input type="date" name="search_checkinDate" class="search_field">
+
+                <p>Check-out</p>
+                <input type="date" name="search_checkoutDate" class="search_field">
+                <div class="errors">{{message.check_out}}</div>
+            </div>
+            <div class="errors">{{message.check_date_before}}</div>
+            <p>Companions</p>
+            <select name="search_guestsNumber" class="search_field">
+                <option value="1_guest">1 guest</option>
+                <option value="2_guest">2 guests</option>
+                <option value="3_guest">3 guests</option>
+                <option value="4_guest">4 guests</option>
+                <option value="5_guest">5 guests</option>
+                <option value="6_guest">6 guests</option>
+                <option value="7_guest">7 guests</option>
+                <option value="8_guest">8 guests</option>
+                <option value="9_guest">9 guests</option>
+                <option value="10_guest">10 guests</option>
+                <option value="11_guest">11 guests</option>
+                <option value="12_guest">12 guests</option>
+            </select><br><br>
+            {{!-- <a type="submit" class="profile_button" href="/search">search</a> --}}
+
+            <input type="submit" style="margin: 0px auto;" class="profile_button" value="Search">
+            {{!-- <a type="submit" class="profile_button" href="/search">search</a> --}}
+        </form>
+    </div>
+</div>
+<div id="home_wrap">{{!--1 main column --}}
+    <h2>Hot Deals</h2>
+    <div id="random_stays_outerwrap">{{!--3 sub columns --}}
+        <div>
+            <img src="img/stays/1.jpg" alt="1.jpg">
+            <p>Kitchener, Ontario</p>
+            <p>$50 CAD/night average</p>
+        </div>
+        <div>
+            <img src="img/stays/2.jpg" alt="2.jpg">
+            <p>Hamilton, Ontario</p>
+            <p>$60 CAD/night average</p>
+        </div>
+        <div>
+            <img src="img/stays/3.jpg" alt="3.jpg">
+            <p>London, Ontario</p>
+            <p>$70 CAD/night average</p>
+        </div>
+        <div>
+            <img src="img/stays/4.jpg" alt="4.jpg">
+            <p>Toronto, Ontario</p>
+            <p>$120 CAD/night average</p>
+        </div>
+    </div>
+    <div>
+        <h3>1. How does Fantasy Stays work?</h3>
+        <p>Fantasy Stays is an online marketplace which lets people rent out their properties or spare rooms to
+            guests.
+            Fantasy Stays
+            takes 3%
+            commission of every booking from hosts, and between 6% and 12% from guests. There’s plenty of criteria
+            to
+            list
+            for/search a property: from a shared room to an entire house, to having a swimming pool to having a
+            washing
+            machine.
+            There are photos of the property, and the hosts/guests, with full map listing.</p>
+        <h3>2. Why do people like it?</h3>
+        <p>A combination of factors, but primarily financial ones. Guests get good value accommodation at a huge
+            range
+            of
+            price
+            points, from a few pounds a night to hundreds and often in prime locations where a normal hotel would
+            cost
+            infinitely
+            more. Hosts can cash in on spare space, perhaps if children have flown the nest and there’s a spare
+            bedroom.
+            In
+            fact,
+            according to economist Dr Margarethe Theseira, if an Fantasy Stays host lists their property for seven
+            days
+            a
+            month on
+            average
+            they would earn £5,600 per year, a boost to household income equivalent to a 15% pay rise for an average
+            full-time
+            employee.</p>
+        <h3>3. What are the other benefits?</h3>
+        <p>There is more than a financial impetus though: many guests like living like a local and getting
+            restaurant
+            recommendations from people really in-the-know, while many hosts just enjoy meeting new people and
+            showing
+            off
+            their
+            home. 4. Is it easy to book? Yes, very. Once you’ve created a verified profile (which can be linked to
+            social
+            media),
+            you can send a message to the host and either book instantly, or submit a request for later booking.
+            Hosts
+            must
+            show
+            calendars of availability - most are kept well up-to-date - and they will inform you of what they will
+            provide
+            like
+            towels or hairdryers. It’s not advised if you’re travelling through though - many people don’t take
+            bookings
+            for
+            just
+            one night.</p>
+    </div>
+</div>
+<hr>
+<div class="footer_block">
+    <br>
+    <div>
+        <h3>Follow Us</h3>
+        <p>Facebook</p>
+        <p>Instagram</p>
+        <p>YouTube</p>
+    </div>
+
+    <div>
+        <h3>Support</h3>
+        <p>Contact Us</p>
+        <p>Help Guides</p>
+        <p>FAQ</p>
+    </div>
+    <div>
+        <br>
+        <p>©2019 FANTAZY STAYS, INC. ALL RIGHTS RESERVED. </p>
+    </div>
+
+    <br>
+</div>

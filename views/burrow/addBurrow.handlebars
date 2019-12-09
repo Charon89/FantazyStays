@@ -1,0 +1,52 @@
+<img class="user_baner" src="/img/user_banner.png" alt="">
+<div class="profile_outerwrap">
+    <div class="profile_innerwrap">
+        <h1>Add New Burrow</h1>
+        <div class="content_splitwrap">
+            <div class="profilePic_wrap">
+                <img src="/img/uploads/{{admin_user.profilePic}}" alt="{{admin_user.profilePic}}">
+            </div>
+            <div class="profile_information">
+                <h3>Burrow information</h3>
+                <div class="errors">{{{errors}}}</div>
+
+                <form action="burrowList" method="post" enctype="multipart/form-data">
+                    <div class="profile_information_details">
+                        <p>Burrow name: </p>
+                        <input type="text" name="addBurrow_name" class="addBurrow_input_form" value="{{title}}">
+
+                        <p>Price</p>
+                        <input type="text" name="addBurrow_price" class="addBurrow_input_form" value="{{price}}">
+
+                        <p>Location</p>
+                        <select name="addBurrow_location" class="addBurrow_input_form">
+                            <option value="Anywhere">Anywhere</option>
+                            <option value="Winterspring">Winterspring</option>
+                            <option value="Duskwood">Duskwood</option>
+                            <option value="Westfall">Westfall</option>
+                            <option value="Swamp of Sorrows">Swamp of Sorrows</option>
+                        </select>
+
+                        <p>Description</p>
+                        <textarea name="addBurrow_description" class="addBurrow_input_form" id ="addBurrowTextArea"cols="30"
+                            rows="10">{{description}}</textarea>
+
+                        <div>
+                            <label class="file_button" style="margin:20px 0px;">Add picure
+                                <input type="file" name="burrowPic">
+                            </label>
+                        </div>
+
+                        <div>
+                            <input type="submit" class="profile_button" style="display:inline" value="Save">
+                            {{!-- <a type="submit" class="profile_button" style="display:inline-block"
+                                href="burrow/burrowList">Save</a> --}}
+                            <a type="submit" class="profile_button" style="display:inline-block"
+                                href="/user/profile">Exit</a>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

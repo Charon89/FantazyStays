@@ -1,0 +1,62 @@
+<div class="emptydiv">sdfsdf</div>
+<div class="burrowList_outerWrap">
+    <div class="burrowList_innerWrap">
+        <div class="burrowList_content">
+            {{#if admin_user}}
+            {{#each lists}}
+            <div class="burrowList_modelsSplit" burrow-id="{{this._id}}"
+                onclick="window.location.href = 'view/{{this.id}}'">
+                <div id="list_burrowPic">
+                    <img src="/img/uploads/{{this.burrowPic}}" alt="{{this.burrowPic}}"><br>
+                    <h3>{{this.title}}</h3>
+                </div>
+                <p>Price: </p>
+                <p>{{this.price}}</p>
+                <p>Location: </p>
+                <p>{{this.location}}</p>
+                <div>
+                    <form method="POST" action="/burrow/view/{{this._id}}" style="display:inline;">
+                        <input type="submit" value="View" class="burrowList_button" data-id="{{this.id}}"
+                            data-title="{{this.title}}" style="display:inline;">
+                    </form>
+                </div>
+                <div>
+                    <form method="POST" action="/burrow/modify/{{this._id}}" style="display:inline;">
+                        <input type="submit" value="Modify" class="burrowList_button" data-id="{{this.id}}"
+                            data-title="{{this.title}}" style="display:inline;">
+                    </form>
+                    <form method="POST" action="/burrow/delete/{{this._id}}?_method=DELETE" style="display:inline;">
+                        <input type="submit" value="Delete" class="burrowList_button" data-id="{{this.id}}"
+                            data-title="{{this.title}}" style="display:inline;">
+                    </form>
+                </div>
+            </div>
+
+            {{else}}
+            <h3>No records yet</h3>
+            {{/each}}
+
+            {{else}}
+            {{#each lists}}
+            <div class="burrowList_modelsSplit" burrow-id="{{this._id}}"
+                onclick="window.location.href = 'burrow/view/{{this.id}}'">
+                <div id="list_burrowPic">
+                    <img src="/img/uploads/{{this.burrowPic}}" alt="{{this.burrowPic}}"><br>
+                    <h3>{{this.title}}</h3>
+                </div>
+                <p>Price: </p>
+                <p>{{this.price}}</p>
+                <p>Location: </p>
+                <p>{{this.location}}</p>
+            </div>
+            {{else}}
+            <h1 style="margin:0 auto;">No records yet</h1>
+            {{/each}}
+            {{/if}}
+        </div>
+    </div>
+</div>
+<hr>
+<br>
+<h1>asdsdad</h1>
+<br>

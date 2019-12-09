@@ -1,0 +1,23 @@
+<div class="form_outerwrap">
+    <div class="form_innerwrap">
+        <a href="/">
+            <p style="text-align: right; font-size:1.5em;" id="RegistrationClose">&#10006;</p>
+        </a>
+
+        <img src="./img/logo_fs.png" alt="logo_fs">
+        <h1>Portal access</h1><br><br>
+        <form action="/user/login" method="post">
+
+            <input type="email" name="login_email" placeholder="Tier e-mail" class="signup_input_form"
+                value="{{r_email}}"><br>
+
+            <div class="errors">{{{message.email}}}</div>
+
+            <input type="password" name="login_password" placeholder="Tier password" class="signup_input_form"
+                value="{{r_password}}"><br>
+            <div class="errors">{{{message.password}}}</div>
+            <div class="errors">{{{errors}}}</div>
+            <input type="submit" value="Sign Up" class="submit_button">
+        </form>
+    </div>
+</div>

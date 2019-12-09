@@ -1,0 +1,79 @@
+<img class="user_baner" src="/img/user_banner.png" alt="">
+<div class="profile_outerwrap">
+    <div class="profile_innerwrap">
+        {{#if admin_user}}
+        <h1>{{admin_user.first_name}} {{admin_user.last_name}}</h1>
+        <div class="content_splitwrap">
+            <div>
+                <img src="/img/uploads/{{admin_user.profilePic}}" alt="{{admin_user.profilePic}}">
+            </div>
+            <div class="profile_information">
+                <h3>Profile information</h3>
+                <div class="profile_information_details">
+                    <p>Full name: </p>
+                    <p>{{admin_user.first_name}} {{admin_user.last_name}}</p>
+                    <p>E-mail:</p>
+                    <p>{{admin_user.email}}</p>
+                    <p>Birthday:</p>
+                    <p> {{admin_user.birthdate}}</p>
+                    <p>Country:</p>
+                    <p>{{admin_user.country}}</p>
+                    <p>City:</p>
+                    <p>{{admin_user.city}}</p>
+                    <p>Address:</p>
+                    <p>{{admin_user.address}}</p>
+                    <p>Postal code:</p>
+                    <p>{{admin_user.postalCode}}</p>
+                    <p>Subscription:</p>
+                    <p>{{admin_user.subscription}}</p>
+                    <p>Profile created:</p>
+                    <p>{{admin_user.date_created}}</p>
+
+
+                    <a class="profile_button" href="/user/profile/edit">Edit profile</a>
+
+                    <a style="float:left" class="profile_button" href="/burrow/addBurrow">New
+                        Burrow</a>
+
+                    {{!-- <a class="profile_button" href="/user/profile/edit">Delete profile</a> --}}
+                </div>
+            </div>
+        </div>
+        {{else}}
+        <h1>{{user.first_name}} {{user.last_name}}</h1>
+        <div class="content_splitwrap">
+            <div>
+                <img src="/img/uploads/{{user.profilePic}}" alt="{{user.profilePic}}">
+            </div>
+            <div class="profile_information">
+
+                <h3>Profile information</h3>
+                <hr>
+                <div class="profile_information_details">
+                    <p>Full name: </p>
+                    <p>{{user.first_name}} {{user.last_name}}</p>
+                    <p>E-mail:</p>
+                    <p>{{user.email}}</p>
+                    <p>Birthday:</p>
+                    <p> {{user.birthdate}}</p>
+                    <p>Country:</p>
+                    <p>{{user.country}}</p>
+                    <p>City:</p>
+                    <p>{{user.city}}</p>
+                    <p>Address:</p>
+                    <p>{{user.address}}</p>
+                    <p>Postal code:</p>
+                    <p>{{user.postalCode}}</p>
+                    <p>Subscription:</p>
+                    <p>{{user.subscription}}</p>
+                    <p>Profile created:</p>
+                    <p>{{user.date_created}}</p>
+
+                    <a class="profile_button" href="/user/profile/edit">Edit profile</a>
+                    {{!-- <a class="profile_button" href="/user/profile/edit">Delete profile</a> --}}
+                </div>
+            </div>
+        </div>
+        {{/if}}
+    </div>
+</div>

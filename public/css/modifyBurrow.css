@@ -1,0 +1,96 @@
+.modifyBurrow_outerWrap {
+    margin-top: 80px;
+    width: 100%;
+}
+
+.modifyBurrow_innerWrap {
+    display: grid;
+    grid-template-columns: 10% 1fr 10%;
+}
+
+.modifyBurrow_content {
+    background-color: var(--form-bg-color_tr);
+    border: 1px solid var(--border-dark);
+    box-shadow: 0.5px 0.5px 1px 0.5px black;
+    grid-column: 2;
+    padding: 15px;
+}
+
+.modify_burrow {
+    resize: vertical;
+    color: var(--main-p-color);
+    font-size: 1.1em;
+    background: var(--navbar-bg-color);
+    margin-top: 15px;
+    height: 30px;
+    width: 100%;
+    border: 1px solid var(--border-dark);
+    border-radius: 3px;
+    outline: none;
+}
+
+.modify_burrow_textarea {
+    resize: vertical;
+    color: var(--main-p-color);
+    font-size: 1.1em;
+    background: var(--navbar-bg-color);
+    margin-top: 15px;
+
+    width: 100%;
+    border: 1px solid var(--border-dark);
+    border-radius: 3px;
+    outline: none;
+}
+
+.burrow_information_details {
+    display: grid;
+    grid-template-columns: 250px 1fr;
+}
+
+.modify_burrow:focus {
+    border: 1px solid var(--border-light);
+}
+
+#button_wrap {
+    grid-column: 2;
+}
+
+.burrowModify_button {
+    text-align: center;
+    display: inline-block;
+    background-color: var(--button-bg-color);
+    color: var(--navbar-font-color);
+    font-size: 1.3em;
+    margin: 20px 0px;
+    width: 180px;
+    border-radius: 5px;
+    border: 1px solid var(--border-dark);
+    box-shadow: 0px 1px 5px 1px black;
+}
+
+.burrowModify_button:hover {
+    background-color: rgb(80, 1, 1);
+    box-shadow: inset 0px 0px 5px 2px black;
+    transition: 0.5s;
+    border-radius: 5px;
+}
+
+.burrowModify_button:active {
+    background-color: rgb(0, 211, 35);
+    box-shadow: inset 0px 0px 5px 2px black;
+    transition: 0.5s;
+    border-radius: 5px;
+}
+
+@media only screen and (max-width: 780px) {
+    .modifyBurrow_innerWrap {
+        display: block;
+
+    }
+
+    .burrow_information_details {
+        display: grid;
+        grid-template-columns: 150px 1fr;
+    }
+
+}
