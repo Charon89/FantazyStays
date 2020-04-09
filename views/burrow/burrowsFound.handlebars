@@ -5,7 +5,7 @@
             {{#if admin_user}}
             {{#each lists}}
             <div class="burrowList_modelsSplit" burrow-id="{{this._id}}"
-                onclick="window.location.href = 'view/{{this.id}}'">
+                onclick="window.location.href = '/burrow/view/{{this.id}}'">
                 <div id="list_burrowPic">
                     <img src="/img/uploads/{{this.burrowPic}}" alt="{{this.burrowPic}}"><br>
                     <h3>{{this.title}}</h3>
@@ -38,7 +38,7 @@
             {{else}}
             {{#each lists}}
             <div class="burrowList_modelsSplit" burrow-id="{{this._id}}"
-                onclick="window.location.href = 'burrow/view/{{this.id}}'">
+                onclick="window.location.href = '/burrow/burrow/view/{{this.id}}'">
                 <div id="list_burrowPic">
                     <img src="/img/uploads/{{this.burrowPic}}" alt="{{this.burrowPic}}"><br>
                     <h3>{{this.title}}</h3>
